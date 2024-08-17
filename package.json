@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/ndex.js",
+    "start": "node backend/index.js",
     "dev": "nodemon backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "graphql": "^16.9.0",
+    "graphql-nexus": "^0.1.1",
     "graphql-passport": "^0.6.8",
     "mongoose": "^8.5.2",
     "passport": "^0.7.0"

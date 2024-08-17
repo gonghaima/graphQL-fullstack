@@ -82,20 +82,14 @@ const userResolver = {
         throw new Error('Internal server error');
       }
     },
-    // user: async (_, { userId }) => {
-    //   try {
-    //     const user = await User.findById(userId);
-    //     return user;
-    //   } catch (err) {
-    //     console.error('Error in user query:', err);
-    //     throw new Error(err.message || 'Error getting user');
-    //   }
-    // },
     user: async (_, { userId }) => {
-      return users.find((user) => user._id === userId);
-    },
-    users: () => {
-      return users;
+      try {
+        const user = await User.findById(userId);
+        return user;
+      } catch (err) {
+        console.error('Error in user query:', err);
+        throw new Error(err.message || 'Error getting user');
+      }
     },
   },
   User: {

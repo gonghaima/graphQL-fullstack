@@ -14,6 +14,7 @@ import connectMongo from 'connect-mongodb-session';
 import mergedResolvers from './resolvers/index.js';
 import mergedTypeDefs from './typeDefs/index.js';
 
+dotenv.config();
 const app = express();
 const httpServer = http.createServer(app);
 

@@ -1,7 +1,9 @@
+import React from 'react';
+
 function App() {
   return (
     <>
-      <h1 className="text-red-500 text-5xl bg-blue-50">Hello</h1>
+      <h1 className="text-red-500 text-5xl ">Hello</h1>
     </>
   );
 }

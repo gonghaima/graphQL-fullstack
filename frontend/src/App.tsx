@@ -1,11 +1,21 @@
-import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import SignUpPage from './pages/SignUpPage';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import TransactionPage from './pages/TransactionPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <>
-      <h1 className="text-red-500 text-5xl ">Hello</h1>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/transaction/:id" element={<TransactionPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }
-
 export default App;

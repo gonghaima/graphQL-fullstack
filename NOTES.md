@@ -1,3 +1,5 @@
+Progress: 1:50:38
+
 # graphql package =>
 
 - It is the core GraphQL implementation in **JavaScript**.

@@ -1,7 +1,7 @@
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-// import Cards from '../components/Cards';
+import Cards from '../components/Cards';
 import TransactionForm from '../components/TransactionForm';
 
 import { MdLogout } from 'react-icons/md';
@@ -69,7 +69,7 @@ const HomePage = () => {
 
           <TransactionForm />
         </div>
-        {/* <Cards /> */}
+        <Cards />
       </div>
     </>
   );

@@ -5,12 +5,19 @@ import LoginPage from './pages/LoginPage';
 import TransactionPage from './pages/TransactionPage';
 import NotFound from './pages/NotFound';
 import Header from './components/ui/Header';
+import { useQuery } from '@apollo/client';
+import { GET_AUTHENTICATED_USER } from './graphql/queries/user.query';
 
 function App() {
   const authUser = true;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { loading, data, error } = useQuery(GET_AUTHENTICATED_USER);
+  console.log("loading: ", loading);
+  console.log('data: ', data);
+  console.log("error: ", error);
   return (
     <>
-    {authUser && <Header />}
+      {authUser && <Header />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />

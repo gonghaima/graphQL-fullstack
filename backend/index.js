@@ -11,6 +11,8 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongodb-session';
 
+import { connectDB } from './db/connectDB.js';
+
 import { buildContext } from 'graphql-passport';
 import mergedResolvers from './resolvers/index.js';
 import mergedTypeDefs from './typeDefs/index.js';
@@ -55,5 +57,6 @@ app.use(
 
 // Modified server startup
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+await connectDB();
 
 console.log(`🚀 Server ready at http://localhost:4000/`);

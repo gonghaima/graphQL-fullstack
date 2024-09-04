@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -9,19 +9,24 @@ import { useQuery } from '@apollo/client';
 import { GET_AUTHENTICATED_USER } from './graphql/queries/user.query';
 
 function App() {
-  const authUser = true;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { loading, data, error } = useQuery(GET_AUTHENTICATED_USER);
-  console.log("loading: ", loading);
-  console.log('data: ', data);
-  console.log("error: ", error);
+  const { loading, data } = useQuery(GET_AUTHENTICATED_USER);
+  if (loading) return null;
   return (
     <>
       {data?.authUser && <Header />}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route
+          path="/"
+          element={data.authUser ? <HomePage /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/login"
+          element={!data.authUser ? <LoginPage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/signup"
+          element={!data.authUser ? <SignUpPage /> : <Navigate to="/" />}
+        />
         <Route path="/transaction/:id" element={<TransactionPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

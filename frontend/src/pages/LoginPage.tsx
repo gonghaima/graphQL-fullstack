@@ -30,8 +30,8 @@ const LoginPage = () => {
     try {
       await login({ variables: { input: loginData } });
     } catch (error) {
-      console.error('Error logging in:', error);
       toast.error(error.message);
+      console.error('Error logging in:', error);
     }
   };
 

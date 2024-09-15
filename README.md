@@ -1,21 +1,38 @@
-# graphQL-fullstack
+# [GraphQL Crash Course - Build an Expense Tracker App](https://graphql-fullstack.onrender.com/)
 
-PROGRESS: 1:40:16
+![Demo App](https://i.ibb.co/WHyMscm/Screenshot-42.png)
 
-## Frontend setup
+[Website](https://graphql-fullstack.onrender.com/)
 
-### Setup vite react
+Welcome to the MERN GraphQL Expense Tracker App! This project is designed to help you manage your expenses efficiently using a modern tech stack and GraphQL.
 
-`npm create vite@latest .`
+## Features:
 
-## Setup tailwind css
+- 🌟 Tech stack: MERN (MongoDB, Express.js, React.js, Node.js) + Apollo GraphQL
+- 📝 Learn type definitions and resolvers for defining GraphQL schema and data fetching logic
+- 🔄 Mutations for modifying data in the GraphQL API and establishing graph relations
+- 🎃 Authentication with Passport.js and MongoDB session store
+- 🚀 Global state management with Apollo Client
+- 🐞 Error handling both on the server and on the client
+- ⭐ Deployment made easy with a platform called Render
+- 👾 Cron jobs for scheduled tasks and automation
+- ⏳ And much more!
 
-`npm install -D tailwindcss postcss autoprefixer`
-<br>
-`npx tailwindcss init -p`
+### Setup .env file
 
-VS code Extension: (to be installed when needed)
-Tailwind CSS Intellisense
+```js
+MONGO_URI=...
+SESSION_SECRET=...
+```
 
+### Build the app
 
-aceternity UI - style lib
+```shell
+npm run build
+```
+
+### Start the app
+
+```shell
+npm start
+```

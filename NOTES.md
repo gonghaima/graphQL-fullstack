@@ -1,5 +1,3 @@
-Progress: 2:31:40
-
 # graphql package =>
 
 - It is the core GraphQL implementation in **JavaScript**.
@@ -73,3 +71,28 @@ npm install @apollo/client graphql
 - **@apollo/client:** This single package contains virtually everything you need to set up Apollo Client. It includes the in-memory cache, local state management, error handling, and a React-based view layer.
 
 - **graphql:** This package provides logic for parsing GraphQL queries.
+
+
+
+
+
+# graphQL-fullstack
+
+## Frontend setup
+
+### Setup vite react
+
+`npm create vite@latest .`
+
+## Setup tailwind css
+
+`npm install -D tailwindcss postcss autoprefixer`
+<br>
+`npx tailwindcss init -p`
+
+VS code Extension: (to be installed when needed)
+Tailwind CSS Intellisense
+
+
+aceternity UI - style lib
+

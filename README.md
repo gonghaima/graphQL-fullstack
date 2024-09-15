@@ -2,8 +2,8 @@
 
 ![Demo App](https://i.ibb.co/WHyMscm/Screenshot-42.png)
 
-[Website](https://graphql-fullstack.onrender.com/)
-Login: harry
+[Website](https://graphql-fullstack.onrender.com/) <br/>
+Test Login: harry <br/>
 Psd: a...k
 
 Welcome to the MERN GraphQL Expense Tracker App! This project is designed to help you manage your expenses efficiently using a modern tech stack and GraphQL.

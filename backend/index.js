@@ -12,15 +12,17 @@ import passport from 'passport';
 import session from 'express-session';
 import connectMongo from 'connect-mongodb-session';
 
-import { connectDB } from './db/connectDB.js';
-import { configurePassport } from './passport/passport.config.js';
-
 import { buildContext } from 'graphql-passport';
 import mergedResolvers from './resolvers/index.js';
 import mergedTypeDefs from './typeDefs/index.js';
 
+import { connectDB } from './db/connectDB.js';
+import { configurePassport } from './passport/passport.config.js';
+import job from "./cron.js";
+
 dotenv.config();
 configurePassport();
+job.start();
 
 const __dirname = path.resolve();
 const app = express();

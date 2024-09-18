@@ -569,7 +569,7 @@ cors@^2.8.5:
     object-assign "^4"
     vary "^1"
 
-cron@^3.1.6:
+cron@^3.1.7:
   version "3.1.7"
   resolved "https://registry.npmjs.org/cron/-/cron-3.1.7.tgz"
   integrity sha512-tlBg7ARsAMQLzgwqVxy8AZl/qlTc5nibqYwtNGoCrd+cV+ugI+tvZC1oT/8dFH8W455YrywGykx/KMmAqOr7Jw==
